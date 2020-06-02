@@ -120,7 +120,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
                 } 
             }else{ 
                 $sessData['status']['type'] = 'error'; 
-                $sessData['status']['msg'] = 'Some problem occurred, please try again.eto?'; 
+                $sessData['status']['msg'] = 'Some problem occurred, please try again.'; 
             } 
         }else{ 
             $sessData['status']['type'] = 'error'; 
