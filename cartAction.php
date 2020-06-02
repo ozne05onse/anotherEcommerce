@@ -81,7 +81,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
          
         if(empty($errorMsg)){ 
             // Insert customer data in the database 
-            $insertCust = $db->query("INSERT INTO customers (first_name, last_name, tablenum, phone, ordate,ortime) VALUES ('".$first_name."', '".$last_name."', '".$table."', '".$phone."', '".$date."','".$time."',)"); 
+            $insertCust = $db->query("INSERT INTO customers (first_name, last_name, tablenum, phone, ordate,ortime) VALUES ('".$first_name."', '".$last_name."', '".$table."', '".$phone."', '".$date."','".$time."')"); 
              
             if($insertCust){ 
                 $custID = $db->insert_id; 
