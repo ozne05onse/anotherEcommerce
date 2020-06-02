@@ -1,0 +1,21 @@
+.cart-view{
+	position: fixed; z-index: 9999; top: 60%; left: 90%;
+	background: white;
+	border-radius: 10px;
+}
+
+.vc-bg{
+	background-image: url('../images/alcohol-architecture-bar-beer-260922.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 250px;
+}
+
+.check-bg{
+	background-image: url('../images/clear-wine-glass-on-table-67468.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 250px;
+}
