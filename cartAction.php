@@ -79,7 +79,11 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
          
         if(empty($errorMsg)){ 
             // Insert customer data in the database 
+<<<<<<< HEAD
             $insertCust = $db->query("INSERT INTO customers (first_name, last_name, tablenum, phone, ordate, ortime) VALUES ('".$first_name."', '".$last_name."', '".$table."', '".$phone."', '".$date."','".$time."')"); 
+=======
+            $insertCust = $db->query("INSERT INTO customers (first_name, last_name, tablenum, phone, ordate,ortime) VALUES ('".$first_name."', '".$last_name."', '".$table."', '".$phone."', '".$date."','".$time."')"); 
+>>>>>>> 0cc566cff58cef2ededbfbe8a317cf6db9441467
              
             if($insertCust){ 
                 $custID = $db->insert_id; 
@@ -118,7 +122,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
                 } 
             }else{ 
                 $sessData['status']['type'] = 'error'; 
-                $sessData['status']['msg'] = 'Some problem occurred, please try again.eto?'; 
+                $sessData['status']['msg'] = 'Some problem occurred, please try again.'; 
             } 
         }else{ 
             $sessData['status']['type'] = 'error'; 
