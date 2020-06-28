@@ -1,8 +1,46 @@
 .cart-view{
-	position: fixed; z-index: 9999; top: 60%; left: 90%;
+	position: fixed; z-index: 9999; top: 60%; left: 60%;
 	background: white;
 	border-radius: 10px;
+	border:solid #E8E8E8FF 1px;
 }
+
+
+@media only screen and (max-width: 991.98px) {
+
+	.cart-view{
+		left: 85%;
+	}
+
+
+}
+
+@media only screen and  (max-width: 767.98px) {
+
+	.cart-view{
+		left: 77%;
+	}
+
+}
+
+@media only screen and (max-width: 575.98px) {
+
+	.cart-view{
+		left: 70%;
+	}
+
+	.display-2 {
+		font-size: 4rem;
+	}
+
+	.display-3 {
+		font-size: 3rem;
+	}
+
+
+}
+
+
 
 .vc-bg{
 	background-image: url('../images/alcohol-architecture-bar-beer-260922.jpg');
@@ -13,9 +51,19 @@
 }
 
 .check-bg{
-	background-image: url('../images/clear-wine-glass-on-table-67468.jpg');
+	background-image: url('../images/food-plate-yellow-spaghetti-64208.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 250px;
 }
+
+.order-bg{
+	background-image: url('../images/four-women-sitting-in-front-of-food-in-room-1517226.jpg');
+	background-position:center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 250px;
+}
+
+

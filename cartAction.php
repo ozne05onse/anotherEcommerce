@@ -28,7 +28,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
         $insertItem = $cart->insert($itemData); 
          
         // Redirect to cart page 
-        // $redirectLoc = $insertItem?'viewCart.php':'index.php'; 
+        $redirectLoc = $insertItem?'viewCart.php':'index.php'; 
     }elseif($_REQUEST['action'] == 'updateCartItem' && !empty($_REQUEST['id'])){ 
         // Update item data in cart 
         $itemData = array( 
@@ -65,9 +65,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
         if(empty($last_name)){ 
             $errorMsg .= 'Please enter your last name.<br/>'; 
         } 
-        if(empty($table)){ 
-            $errorMsg .= 'Please enter your email table.<br/>'; 
-        } 
+
         if(empty($phone)){ 
             $errorMsg .= 'Please enter your phone number.<br/>'; 
         } 
@@ -81,13 +79,13 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
          
         if(empty($errorMsg)){ 
             // Insert customer data in the database 
-            $insertCust = $db->query("INSERT INTO customers (first_name, last_name, tablenum, phone, ordate,ortime) VALUES ('".$first_name."', '".$last_name."', '".$table."', '".$phone."', '".$date."','".$time."',)"); 
+            $insertCust = $db->query("INSERT INTO customers (first_name, last_name, tablenum, phone, ordate, ortime) VALUES ('".$first_name."', '".$last_name."', '".$table."', '".$phone."', '".$date."','".$time."')"); 
              
             if($insertCust){ 
                 $custID = $db->insert_id; 
                  
                 // Insert order info in the database 
-                $insertOrder = $db->query("INSERT INTO orders (customer_id, grand_total, created, status) VALUES ($custID, '".$cart->total()."', NOW(), 'Pending')"); 
+                $insertOrder = $db->query("INSERT INTO orders (customer_id, grand_total) VALUES ($custID, '".$cart->total()."')"); 
              
                 if($insertOrder){ 
                     $orderID = $db->insert_id; 
@@ -126,7 +124,9 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
             $sessData['status']['type'] = 'error'; 
             $sessData['status']['msg'] = 'Please fill all the mandatory fields.<br>'.$errorMsg;  
         } 
-        $_SESSION['sessData'] = $sessData; 
+        // $_SESSION['sessData'] = $sessData; 
+    header("Location: $redirectLoc"); 
+        
     } 
 } 
  

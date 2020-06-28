@@ -9,7 +9,9 @@ $cart = new Cart;
 <head>
 <title>View Cart - Manay's Eatery</title>
 <meta charset="utf-8">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    
 <!-- Bootstrap core CSS -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -33,9 +35,11 @@ function updateCartItem(obj,id){
 </head>
 <body>
     <?php include_once 'parts/header.php'; ?>
+
     <section class="container-fluid vc-bg" style="position: relative; top:0;left: 0; right: 0; bottom: 0; ">
         <h1 class="display-2 text-white text-center" style="margin: 0;position: absolute;top: 50%;left: 50%;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);" >SHOPPING CART</h1>
     </section>
+
 <div class="container mt-5">
     <div class="row">
         <div class="cart">

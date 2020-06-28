@@ -29,7 +29,9 @@ if(!empty($sessData['status']['msg'])){
 <head>
 <title>Checkout - Manay's Eatery</title>
 <meta charset="utf-8">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    
 <!-- Bootstrap core CSS -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -100,7 +102,26 @@ if(!empty($sessData['status']['msg'])){
                             </div>
                             <div class="mb-3 col-md-4 col-lg-4 col-md-12">
                                 <label for="tablenum">Table #(Optional)</label>
-                                <input type="number" class="form-control" name="tablenum" value="<?php echo !empty($postData['tablenum'])?$postData['tablenum']:''; ?>">
+                               
+
+                                <select class="custom-select my-1 mr-sm-2" name="tablenum" id="tablenum">
+    <option selected >Choose...</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+  </select>
                             </div>
                         </div>
                         <div class="row">                            

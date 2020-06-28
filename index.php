@@ -10,9 +10,11 @@ require_once 'dbConfig.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Manay's Eatery</title>
+<title>Manay's Eatery</title> 
 <meta charset="utf-8">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    
 <!-- Bootstrap core CSS -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -29,16 +31,16 @@ require_once 'dbConfig.php';
             <h1 class="display-1" style="color: white;">Manay's Eatery</h1>
             <p class="lead" style="color: white; font-size: 2.5rem;">Life is too short, let's make it long.</p>
         </section>
-        <img src="images/table-in-vintage-restaurant-6267.jpg" style="position: absolute; top:-150px; left: 0; right: 0; bottom: 0; z-index: -9999;" class="img-fluid" alt="Lomi kayo.">
+        <img src="images/table-in-vintage-restaurant-6267.jpg" style="position: absolute; top:-150px; left: 0; right: 0; bottom: 0; z-index: -9999; height: 700px; width: 100%;" class="img-fluid" alt="Manay's Header Background Image">
     </div>
 </header>
     
+    <!-- Cart basket -->
+    <div class="cart-view shadow p-3">
+        <a href="viewCart.php" class="color:white;" title="View Cart"><img height="60" src="images/cartIcon.png"> <br>(<?php echo ($cart->total_items() > 0)?$cart->total_items().' Items':'Empty'; ?>)</a>
+    </div>
 <div class="container">
 	
-    <!-- Cart basket -->
-    <div class="cart-view">
-        <a href="viewCart.php" class="color:white;" title="View Cart"><img height="60" src="images/cartIcon.png"> (<?php echo ($cart->total_items() > 0)?$cart->total_items().' Items':'Empty'; ?>)</a>
-    </div>
     
     <!-- Product list -->
     <div class="row col-lg-12">
